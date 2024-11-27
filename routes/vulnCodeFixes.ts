@@ -87,7 +87,7 @@ export const checkCorrectFix = () => async (req: Request<Record<string, unknown>
     if (selectedFix === fixData.correct) {
       await challengeUtils.solveFixIt(key)
       res.status(200).json({
-        file: file,
+        file,
         verdict: true,
         explanation
       })
